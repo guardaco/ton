@@ -51,8 +51,8 @@
     "@ton/crypto": ">=3.2.0"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "access": "restricted",
+    "registry": "https://nexus3.guarda.com/repository/guarda/"
   },
   "release-it": {
     "github": {
@@ -63,6 +63,5 @@
         "filename": "CHANGELOG.md"
       }
     }
-  },
-  "packageManager": "yarn@3.4.1"
+  }
 }

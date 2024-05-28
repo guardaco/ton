@@ -1,5 +1,5 @@
 /**
- * Copyright (c) Whales Corp. 
+ * Copyright (c) Whales Corp.
  * All Rights Reserved.
  *
  * This source code is licensed under the MIT license found in the
@@ -10,8 +10,6 @@ import DataLoader from 'dataloader';
 import axios, { AxiosAdapter } from 'axios';
 import { Address, Cell, TupleItem } from '@ton/core';
 import { z } from 'zod';
-
-const version = require('../../../package.json').version as string;
 
 const blockIdExt = z.object({
     '@type': z.literal('ton.blockIdExt'),
@@ -328,10 +326,9 @@ export class HttpApi {
     private async doCall<T>(method: string, body: any, codec: z.ZodType<T>) {
         let headers: Record<string, any> = {
             'Content-Type': 'application/json',
-            'X-Ton-Client-Version': version,
         }
         if (this.parameters.apiKey) {
-            headers['X-API-Key'] = this.parameters.apiKey
+            headers['api-key'] = this.parameters.apiKey
         }
         let res = await axios.post<{ ok: boolean, result: T }>(this.endpoint, JSON.stringify({
             id: '1',
