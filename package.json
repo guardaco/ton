@@ -1,6 +1,6 @@
 {
   "name": "@ton/ton",
-  "version": "13.11.2.1",
+  "version": "13.11.2-rc.2",
   "repository": "https://github.com/ton-org/ton.git",
   "author": "Whales Corp. <developers@whalescorp.com>",
   "license": "MIT",
@@ -17,7 +17,7 @@
   "devDependencies": {
     "@release-it/keep-a-changelog": "^5.0.0",
     "@ton/core": "^0.56.0",
-    "@ton/crypto": "3.2.0",
+    "@ton/crypto": "3.2.1-rc.2",
     "@ton/emulator": "^2.1.1",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.10",
